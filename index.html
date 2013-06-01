@@ -1,0 +1,1558 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>Conférence Java - Novae 2013</title>
+
+<meta name="description"
+	content="A framework for easily creating beautiful presentations using HTML">
+<meta name="author" content="Hakim El Hattab">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style"
+	content="black-translucent" />
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="css/reveal.min.css">
+<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+<!-- For syntax highlighting -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
+
+<style>
+.align-right{
+	text-align:right;
+}
+
+.align-left{
+	text-align:left;
+}
+</style>
+
+<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+<script>
+	document.write('<link rel="stylesheet" href="css/print/'
+			+ (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper')
+			+ '.css" type="text/css" media="print">');
+</script>
+
+<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+		<!-- Slide bienvenue -->
+			<section>
+					<h4 style="text-align:left">&nbsp;&nbsp;<img src="./img/logo.png" style="vertical-align: middle;border: 0.0px; background: transparent; box-shadow: none;">Montpellier JUG</h4>
+					<br />
+					<br />
+					<h1><img src="./img/logo-novaeV3.jpg"
+							style="vertical-align: middle;border: 0.0px; background: #003366; box-shadow: none;">&nbsp;BIENVENUE
+					</h1>
+					<br /> <br />
+					<div>
+						<img src="./img/polytech.jpg"
+							style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+						<img src="./img/geomatys.jpg"
+							style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+						<img src="./img/oxiane.jpg"
+							style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+						<img src="./img/esii.jpg"
+							style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+						<img src="./img/agysoft.jpg"
+							style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+						<img src="./img/amesys.jpg"
+							style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					</div>
+					<br />
+			</section>
+		<!-- Plan et orateur -->
+		<section>
+			<!-- Présentation évènement de ce soir-->
+			<section>
+					<h2><img src="./img/logo.png"
+						style="border: 0.0px; background: transparent; box-shadow: none;">&nbsp;Evènement de ce soir
+					</h2>
+					<br/>
+					<h3>Java Bilan et perspectives</h3>
+					<br/>
+					<ol>
+						<li>Merci à NOVAE pour l'organisation de cet évènement</li>
+						<li>Objectif : Faire un tour du propriétaire concernant Java</li>
+					</ol>
+					<img src="./img/timer.png"/>
+					<br/>
+					<aside class="notes">
+						<ul>
+							<li>Quand Yannick m'a proposé de venir vous parler de java, j'ai pensé :
+							<ol>
+								<li>Java très vaste : echosystème, langage, Frameworks, etc.</li>
+								<li>Public assez hétérogène dans sa connaissance de Java</li>
+							</ol>
+							</li>
+							<li>Donc, faire un tour du propriétaire en survolant un peu tout ça</li>
+						</ul>
+					</aside>
+			</section>
+			<!-- Section orateur -->
+			<section>
+					<h2><img src="./img/logo.png"
+						style="border: 0.0px; background: transparent; box-shadow: none;">&nbsp;Orateur
+					</h2>
+					<h3>Arnaud Castelltort</h3>
+					<img class="fragment" style="border: 0.0px; background: transparent; box-shadow: none; width:641px; height:231px" src="./img/orateur_skills.png"/>
+					<img class="fragment" style="border: 0.0px; background: transparent; box-shadow: none;" src="./img/orateur_jug.png"/>
+			</section>
+		</section>
+
+		<!-- SECTION JUG -->
+		<section>
+
+			<!-- Vous avez dit JUG? -->
+			<section>
+				<h2><img src="./img/logo.png"
+						style="border: 0.0px; background: transparent; box-shadow: none;">&nbsp;Vous avez dit JUG ?</h2>
+				<img src="./img/JUG_sunlogo.gif"/>
+				<br/>
+				<h3>Java User Group</h3>
+				<ul>
+					<li>Communauté indépendante</li>
+					<li>Autour du thème "Java" </li>
+					<li>Groupes reconnus et aidés par <span style="text-decoration:line-through;">SUN</span> Oracle et d'autres éditeurs (Atlassian, O'Reily, ...)</li>
+				</ul>
+
+				<aside class="notes">
+					<ul>
+						<li> Indépendante => indusriels, chercheurs, étudiants, recruteurs, ...</li>
+						<li>thème "Java" => Frameworks, technologies, gestion de projets, ...</li>
+					</ul>
+
+				</aside>
+				<div>
+					<img src="./img/polytech.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/geomatys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/oxiane.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/esii.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/agysoft.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/amesys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+				</div>
+				<br />
+			</section>
+			<!-- Présentation du JUG Montpellier-->
+<!-- 			<section>
+				<h2><img src="./img/logo.png"
+						style="border: 0.0px; background: transparent; box-shadow: none;">Présentation du JUG Montpellier</h2>
+				<br/>
+				<h3>Constat</h3>
+				<ul>
+					<li>Evolution très rapide des technologies</li>
+					<li>Peu de structures indépendantes pour réunir les acteurs TIC</li>
+					<li>Envie d'échanger pour stimuler les compétences</li>
+				</ul>
+				<div>
+					<img src="./img/polytech.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/geomatys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/oxiane.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/esii.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/agysoft.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/amesys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+				</div>
+				<br />
+			</section> -->
+			<!-- Etat d'esprit-->
+			<section>
+			<h2><img src="./img/logo.png"
+						style="border: 0.0px; background: transparent; box-shadow: none;">Etat d'esprit</h2>
+
+				<img style="border: 0.0px; background: transparent; box-shadow: none;" src="./img/duke_cow.png" />
+				<blockquote cite>
+				Dans un état d'esprit professionnel sur le fond et convivial sur la forme
+				</blockquote>
+
+				<aside class="notes">
+					<ul>
+						<li>Créer une communauté indépendante "IRL"</li>
+						<li>Favoriser les échanges entres industriels, universitaires et étudiants</li>
+						<li>Partager la connaissance et les expériences autour des technologies Java</li>
+						<li>Promouvoir les technologies dans la région</li>
+					</ul>
+				</aside>
+				<div>
+					<img src="./img/polytech.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/geomatys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/oxiane.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/esii.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/agysoft.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/amesys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+				</div>
+				<br />
+			</section>
+			<section>
+				<h2>
+					<img src="./img/logo.png"
+						style="border: 0.0px; background: transparent; box-shadow: none;">&nbsp;Evènements
+				</h2>
+				<blockquote cite> Le Jug chaque 3<sup>eme</sup> mercredi du mois
+				</blockquote>
+				<ul>
+					<li>15<sup>ene</sup> évènements</li>
+					<li>~30 sujets traités</li>
+					<li>+ de 30 intervenants</li>
+					<li>De 40 à 80 auditeurs en moyenne</li>
+					<li>Une fois par mois</li>
+					<li>Inscription et évènement gratuit</li>
+					<li>Lieu : Polytech'Montpellier</li>
+				</ul>
+				<br />
+				<div>
+					<img src="./img/polytech.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/geomatys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/oxiane.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/esii.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/agysoft.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/amesys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+				</div>
+			</section>
+			<section>
+				<h2>
+					<img src="./img/logo.png"
+						style="border: 0.0px; background: transparent; box-shadow: none;">&nbsp;Exemple Evènement
+				</h2>
+				<img src="./img/elastic_search_affiche.png" style="width:212px; height:303px"/>
+				<img src="./img/elastic_search_plaquette01.png" style="width:495px; height:346px"/>
+				<div>
+					<img src="./img/polytech.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/geomatys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/oxiane.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/esii.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/agysoft.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/amesys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+				</div>
+			</section>
+
+			<section>
+				<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Les Evènements
+				</h2>
+				<img src="./img/jug-events-cloudV4.png"
+							style="border: 0.0px; background: transparent; box-shadow: none;"/>
+			</section>
+
+<!-- 			<section>
+				<h2><img src="./img/logo.png"
+							style="border: 0.0px; background: transparent; box-shadow: none;">Derniers Evènements
+				</h2>
+				<ul>
+					<li>Avril : Soirée Vaadin</li>
+					<li>Mars : Appcelerator Titanium</li>
+					<li>Février : GoogleTV & Blackberry 10</li>
+					<li>Janvier : Performance JEE</li>
+					<li>Novembre 2012 : ElasticSearch</li>
+					<li>Octore 2012 : Ceylon</li>
+					<li>...</li>
+				</ul>
+
+				<div>
+					<img src="./img/polytech.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/geomatys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/oxiane.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/esii.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/agysoft.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/amesys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+				</div>
+			</section>
+
+			<section>
+				<h2><img src="./img/logo.png"
+							style="border: 0.0px; background: transparent; box-shadow: none;">Prochains Evènements
+				</h2>
+				<ul>
+					<li><span style="text-decoration:line-through;">Mai : Dart - Sébatien Deleuze</span></li>
+					<li>Juin : Retours sur Devoxx France 2013 ?</li>
+					<li>Septembre : Play 2 - Damien Boissin</li>
+					<li>Octobre : Angular.js - Thierry Chatel</li>
+					<li>Novembre : Neo4j - Arnaud Castelltort</li>
+				</ul>
+
+
+				<div>
+					<img src="./img/polytech.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/geomatys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/oxiane.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/esii.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/agysoft.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/amesys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+				</div>
+			</section> -->
+
+			<section>
+				<h2><img src="./img/logo.png"
+							style="border: 0.0px; background: transparent; box-shadow: none;">Nous contacter
+				</h2>
+
+				<img src="./img/jug_site.png" style="width:461px; height:305px"/>
+				<ul>
+					<li>Site internet : <a href="http://www.jug-montpellier.org">http://www.jug-montpellier.org</a></li>
+					<li>Tweeter : <a href="https://twitter.com/montpellierjug">@montpellierjug</a></li>
+					<li>Google Group : <a href="http://groups.google.com/group/jug-montpellier">jug-montpellier</a></li>
+				</ul>
+				<div>
+					<img src="./img/polytech.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/geomatys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/oxiane.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/esii.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/agysoft.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/amesys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+				</div>
+			</section>
+
+			<section>
+				<h1>
+					<img src="./img/logo.png"
+						style="border: 0.0px; background: transparent; box-shadow: none;">&nbsp;JUG Need You!
+				</h1>
+				<br>
+				<img src="./img/we_need_you.png"/>
+				<br/>
+				<div>
+					<img src="./img/polytech.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/geomatys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/oxiane.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/esii.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/agysoft.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+					<img src="./img/amesys.jpg"
+						style="width: 150px; height: 53px; border: 0.0px; background: transparent; box-shadow: none;">
+				</div>
+				<br />
+			</section>
+		</section>
+
+		<!-- #### Java : Bilan et perspectives ### -->
+		<section>
+			<h1>
+				&nbsp;Java
+			</h1>
+			<br>
+			<h2>Bilan et perspectives</h2>
+
+			<img src="./img/logo-novaeV3.jpg"
+					style="border: 0.0px; background: transparent; box-shadow: none;">
+			<br /> <br />
+			<div style="text-align: right;">
+				Arnaud Castelltort - <a href='https://twitter.com/a_castelltort'>@a_castelltort</a>
+			</div>
+		</section>
+
+			<!-- ############## Les problématiques ############## -->
+			<section>
+				<h2>Le sommaire</h2>
+				<img src="./img/sommaire_vert.png"
+					style="border: 0.0px; background: transparent; box-shadow: none;">
+				<aside class="notes">
+					<ol>
+						<li>Bilan Java
+							<ul>
+								<li>Pourquoi Java ?</li>
+								<li>Java 1.0 -> Java 6 : éléments clefs</li>
+							</ul>
+						</li>
+						<li>Java 7 en quelques slides</li>
+						<li>Les perspectives</li>
+					</ol>
+				</aside>
+
+				<br /> <br /> <br />
+			</section>
+			<section>
+				<h2>Avant propos</h2>
+				<img src="./img/yellow_warning.jpg"
+					style="border: 0.0px; background: transparent; box-shadow: none;"><br>
+				Tout ce qui suit dans cette présentation est mon opinion personnelle.
+				<div class="fragment">
+					<blockquote cite>
+						Celui qui dit détenir la vérité est un fou ou un dictateur
+					</blockquote>
+				</div>
+				<br/>
+				<div class="fragment">
+					<blockquote cite>
+						Nous ne sommes pas sencé savoir ce que tous les autres ignorent
+					</blockquote>Microsoft
+				</div>
+			</section>
+
+			<!-- ############## Java - Pourquoi ############## -->
+			<section>
+				<section>
+					<h2>Java : pourquoi ?</h2>
+					Qu'est ce que Java ?
+					<div class="fragment">
+						<img  src="./img/java_coffee.jpg"/>
+						<img  src="./img/java_coffee_package.jpg"/>
+					</div>
+					<aside class="notes">
+						un langage, un environnement d'exécution, un écosystème
+					</aside>
+
+				</section>
+
+				<section>
+					<h2>Java : pourquoi ?</h2>
+					<img class="fragment" style="width:587px; height:455px" src="./img/angryc_segfault.png"/>
+				</section>
+
+				<section>
+					<h2>Java : pourquoi ?</h2>
+					<img src="./img/segfault_screen.jpg"/>
+					<img src="./img/brave_segfault.jpg" class="fragment"
+					style="border: 0px; background: none; box-shadow: 0 0 0; position: absolute; left: 400px; top: 400px%;"/>
+				</section>
+
+				<section>
+					<h2>Java : pourquoi ?</h2>
+					<blockquote class="fragment"cite>
+					Write once, run anywhere!
+					</blockquote>
+					<ul class="fragment">
+						<li>Langage fortement typé</li>
+						<li><strong>Gestion de la mémoire simplifiée</strong></li>
+						<li>Gestion des exceptions</li>
+						<li>Multitâche</li>
+						<li>Sécurisé (hmm.. un jour oui.. un jour non) </li>
+						<li>Bibliothèque très riche</li>
+						<li><strong>Exécutable portable</strong></li>
+						<li>Gratuit</li>
+						<li><strong>Forte communauté</strong></li>
+						<li>...</li>
+					</ul>
+				</section>
+
+<!-- 				<section>
+					<h2>Les caractéristiques de Java</h2>
+					<ul>
+						<li>Cross Plaform</li>
+						<li>Paradigme orienté objet</li>
+						<li>Robuste</li>
+						<li>Bonne performance (pour de l'informatique de gestion)</li>
+						<li>Gestion automatiquement de la mémoire</li>
+					</ul>
+				</section> -->
+
+<!-- 				<section>
+					<h2>Java : pourquoi ?</h2>
+					Qu'est ce que Java ?
+					<div>
+						<img src="./img/java_env.png"/>
+						<ul>
+							<li>Un langage de programmation orienté objets</li>
+							<li>Une plateforme (Java Virtual Machine) d'exécution</li>
+							<li>Un echosystème</li>
+							<li>...</li>
+						</ul>
+					</div>
+				</section> -->
+
+<!-- 				<section>
+					<h2>Java.setPlatform("Cross Platform")</h2>
+					<ul>
+						<li><strong>Platform</strong> : décrit une architecture matérielle ou logicielle permettant de faire tourner des logiciels</li>
+						<li>Il existe différentes architecture</li>
+						<li>Il existe différents systèmes d'exploitations</li>
+					</ul>
+
+					Java est WORA :
+					<blockquote class="fragment"cite>
+						Write once, run anywhere!
+					</blockquote>
+				</section> -->
+
+				<!-- <section>
+					<h2>WORA</h2>
+TODO : prendre les images
+				</section>
+
+				<section>
+					<h2>Java.setParadigm("POO")</h2>
+					<ul>
+						<li>Tout est objet</li>
+						<li>Repose sur les concepts objets (Class, Objets, Polymorphism, encapsulation, échange de messages,  inhéritance,  modularité, ...)</li>
+						<li>Repose sur les axioms objets (e.g. flexibilité, extensibilité, réutilisabilité)</li>
+					</ul>
+				</section> -->
+
+				<section>
+					<h2>Terminologie Java</h2>
+					<ul>
+						<li><strong>Java Virual Machine (JVM)</strong> Une architecture machine abstraite respectant les spécifications java</li>
+						<li><strong>Java Runtime Environment (JRE)</strong> Un environement d'exécution qui implémente une JVM et fournit tous les composants (class, librairies, ...) nécessaires à l'exécution des programmes Java</li>
+						<li><strong>Java Development Kit</strong> les outils basiques nécessaires à la compilation, la documentaion et à l'assemblage des programmes (javac, javadoc, jar, ..). Le JDK inclut la JRE</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Les plateformes Java</h2>
+					<img src="./img/java_platforms.png"/><br>
+					<img class="fragment" src="./img/java_card.png" style="width:228px; height:257px" />
+
+					<aside class="notes">
+						<ol>
+							<li>Java Standard Edition (SE)
+							<ul>
+								<li>Pour construire des applications généraliste</li>
+								<li>Qui tournent sur ordinateurs de bureau et portables</li>
+								<li>Inclus un grand nombre de librairies pour des problématiques courantes (réseau, base de données, ...)</li>
+							</ul>
+
+							</li>
+							<li>Java Micro Edition (JME)
+							<ul>
+													<li>Applications pour des appareils à capacité limitée</li>
+													<li>tourne sur des téléphones mobiles, des PDA, ...</li>
+												</ul>
+							</li>
+							<li>Java Enterprise Edition (JEE)</li>
+						</ol>
+						Remarque : il existe aussi Java Card
+					</aside>
+				</section>
+
+				<!-- <section>
+					<h2>Java Standard Edition (SE)</h2>
+					<ul>
+						<li>Pour construire des applications généraliste</li>
+						<li>Qui tournent sur ordinateurs de bureau et portables</li>
+						<li>Inclus un grand nombre de librairies pour des problématiques courantes (réseau, base de données, ...)</li>
+					</ul>
+				</section> -->
+
+<!-- 				<section>
+					<h2>Java Micro Edition (ME)</h2>
+					<ul>
+						<li>Applications pour des appareils à capacité limitée</li>
+						<li>tourne sur des téléphones mobiles, des PDA, ...</li>
+					</ul>
+				</section> -->
+
+<!-- 				<section>
+					<h2>Java Enterprise Edition (ME)</h2>
+					<ul>
+						<li>Création d'application d'entreprise</li>
+						<li>Concentré sur la logique métier</li>
+						<li>Avec une architecture multi-tiers (client, web, méier, Enterprise Information System (EIS))</li>
+					</ul>
+				</section> -->
+
+			</section>
+
+			<!-- ### Java 1.0 à 1.6 ###-->
+			<section>
+
+				<!-- Synopsis -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Java 1.0 -> Java 6
+					</h2>
+
+					<img src="./img/java1to6.png" /><!--style="width:461px; height:305px"/>-->
+				</section>
+
+				<!-- Communauté JCP -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Communauté Java
+					</h2>
+
+					<div style="text-align:left">
+						<ul>
+							<li><strong>Java Communiy Process (JCP)</strong> processus formalisé permettant aux acteurs intéressés de participer à la définition des nouvelles versions et évolutions de la plateforme</li>
+							<li><strong>Java Specification Request (JSR)</strong> le document formel de description d'une spécification et/ou technologie</li>
+							<li><strong>Java & Open Source</strong></li> En mai 2007, Sun rend libre sous licence GNU GPL la plupart des technologies Java.</li>
+						</ul>
+					</div>
+
+					<aside class="notes">
+						JCAP :
+						<ul>
+							<li>objectif : coordonner l'évolution du langage Java</li>
+							<li>composé d'entreprise du domaine Java, de fondations du monde du logiciel libre et de particuliers</li>
+							<li>Le JCP émet des JSR (Java Specification Requests)</li>
+						</ul>
+
+					Le processus :
+						<ul>
+							<li>JCP émet des JSR</li>
+							<li>Des revues des JSR sont menés jusqu'à la publication d'une JSR finale</li>
+							<li>une implémentation gratuite de la technologie est contribuée sous la forme de code source avec un ensemble de TCK (Technology Compatibility Tests)</li>
+						</ul>
+					</aside>
+
+				</section>
+
+				<section>
+					<h2>Java Frameworks</h2>
+					<ul>
+						<li>Outils de tests : junit, testng, ...</li>
+						<li>GUIs : AWT, Swing, ...</li>
+						<li>IDEs : Netbeans, Eclipse, IntelliJ IDEA</li>
+						<li>Build Systems : Ant, Maven, Gradle</li>
+						<li>Persistence : Hibernate, Ibatis, ...</li>
+						<li>Charting & Reporting : Jasper, JFreeChart, ...</li>
+					</ul>
+				</section>
+
+			</section>
+
+			<!-- ### Java 7 ### -->
+			<section>
+				<section>
+						<h2><img src="./img/logo.png"
+									style="border: 0.0px; background: transparent; box-shadow: none;">Java 7
+						</h2>
+						<small>
+						<ul>
+							<li>Sortie en 2011</li>
+							<li>
+								<a href="http://www.oracle.com/technetwork/java/javase/jdk7-relnotes-418459.html" target="_blank">
+									Fonctionnalités : "What's ready"
+								</a>
+							</li>
+							<li>Principales fonctionnalités
+								<ul>
+									<li>Langage : Project Coin (JSR-334)</li>
+									<li>Librairies :
+										<ul>
+											<li>NIO2 (JSR-203)</li>
+											<li>Fork Join framework, <strike>ParallelArray (JSR-166y)</strike></li>
+										</ul>
+									</li>
+									<li>InvokeDynamic bytecode (JSR-292)</li>
+									<li>...</li>
+								</ul>
+							</li>
+						</ul>
+						</small>
+						<br/>
+						Attention : plus de support Java 6!!
+				</section>
+
+				<!-- Project Coin : synopsis -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Project Coin : synopsis
+					</h2>
+					<div class="align-left">
+						Ensemble de sugestions faites par la communauté et implémentées dans Java 7.
+						<ul>
+							<li>String support on Switch case</li>
+							<li>multi-catch and precise re-throw</li>
+							<li>Autocloseable</li>
+							<li>Binary literals && underscores in numeric literals</li>
+							<li>Diamond operator</li>
+							<li>...</li>
+						</ul>
+					</div>
+
+					<aside class="notes">
+						Premiers changements dans le langage depuis 2004 (Java 5)
+					</aside>
+				</section>
+
+				<!-- String Switch -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Project Coin : String Switch case
+					</h2>
+					<pre><code class="java">
+public int NbrDay(String s, int year) {
+	switch(s) {
+	  case "April": case "June":
+	  case "September": case "November":
+	   return 30;
+
+	  case "January": case "March": case "May":
+	  case "July": case "August": case "December":
+	   return 31;
+
+	  case "February":
+	   //...
+	   default:
+	   //...
+	}
+}					</code></pre>
+
+					<aside class="notes">
+					Evite que les gens fassent des enums pour rien
+					</aside>
+				</section>
+
+				<!-- precise Rethrow -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Project Coin : Precise Rethrow
+					</h2>
+					<pre>
+					<code class="java">
+// pre Java 7 "imprecise rethrow"
+// must use "throws Exception"
+public static void imprecise() throws Exception {
+	try {
+		// Code that may throw either
+		// FirstException or SecondException
+	} catch (Exception e) {
+		throw e;
+	}
+}
+					</code>
+					</pre>
+				</section>
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Project Coin : Precise Rethrow
+					</h2>
+					<pre>
+					<code class="java">
+// Java 7 precise rethrow.
+// No longer "throws Exception"
+public static void precise() throws FirstException, SecondException {
+	try {
+		// Code that may throw either
+		// FirstException or SecondException
+	} catch (Exception e) {
+		throw e;
+	}
+}
+					</code>
+					</pre>
+				</section>
+
+				<!-- multi-catch -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Project Coin : Multi-catch
+					</h2>
+					<pre>
+					<code class="java">
+//...
+  catch (IOException ex) {
+	 logger.log(ex);
+	 throw ex;
+ } catch (SQLException ex) {
+	 logger.log(ex);
+	 throw ex;
+ }
+					</code>
+					</pre>
+					<aside class="notes">
+					 important problème tu rethrow sur Exception : signature avec Exception au lieu de IOException, SQLException
+					</aside>
+				</section>
+
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Project Coin : Multi-catch
+					</h2>
+					<pre>
+					<code class="java">
+	try {
+	...
+	} catch (SpecificException ex) {
+	 // Do something very specific!
+	 throw ex;
+	} catch (AnException | MyException | ZeException ex) {
+	 // Do something more generic...
+	 throw ex;
+	}
+					</code>
+					</pre>
+				</section>
+
+				<!-- AutoCloseable -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Project Coin : AutoCloseable
+					</h2>
+
+
+					<pre>
+					<code class="java" data-trim contenteditable>
+try (InputStream in = new FileInputStream(src);
+	 OutputStream out = new FileOutputStream(dest))
+ {
+	 byte[] buf = new byte[8192];
+	 int n;
+	 while (n = in.read(buf)) >= 0)
+	 out.write(buf, 0, n);
+ }
+					</code>
+					</pre>
+					Interface java.lang.AutoCloseable (<code>void close()</code>)
+
+					<aside class="notes">
+										<small>Avant, block finaly (fermer les ressources même en cas d'exceptions) </small>
+					</aside>
+				</section>
+
+				<!-- Binary literals -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Project Coin : Binary literals
+					</h2>
+					Qu'est ce qu'un litéral ?
+					<div class="fragment" > Une valeur constante dans un programme : entier, flotant, caractère, booléen, string, hexa, ..</div>
+					<pre class="fragment">
+					<code class="java" data-trim contenteditable>
+int mask = 0b101010101010;
+					</code>
+					</pre>
+				</section>
+
+				<!-- Underscore in numeric literals -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Project Coin : Underscore numeric literals
+					</h2>
+					<pre>
+					<code class="java" data-trim contenteditable>
+int mask = 0b1010_1010_1010;
+long big = 9_223_783_036_967_937L;
+long creditCardNumber = 1234_5678_9012_3456L;
+long socialSecurityNumber = 999_99_9999L;
+long siret = 123_456_789_00031;
+float pi = 3.14_16F; <!-- fix from 3.14_15F thanks to @oNouguier -->
+long hexBytes = 0xFF_EC_DE_5E;
+long hexWords = 0xCAFE_BFFE;
+					</code>
+					</pre>
+				</section>
+
+				<!-- Diamond operator -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Project Coin : Diamond <>
+					</h2>
+					<pre><code data-trim contenteditable>
+Map&lt;Ville,List&lt;Client&gt;&gt; map = new HashMap&lt;Ville,List&lt;Client&gt;&gt;();
+Map&lt;Ville,List&lt;Client&gt;&gt; map = new HashMap&lt;&gt;();
+
+Map&lt;Dep,Map&lt;Ville,List&lt;Client&gt;&gt;&gt; map = new HashMap&lt;Dep,Map&lt;Ville,List&lt;Client&gt;&gt;&gt;();
+Map&lt;Dep,Map&lt;Ville,List&lt;Client&gt;&gt;&gt; map = new HashMap&lt;&gt;();
+
+Map&lt;Pays,Map&lt;Dep,Map&lt;Ville,List&lt;Client&gt;&gt;&gt;&gt; map = new HashMap&lt;Pays,Map&lt;Dep,Map&lt;Ville,List&lt;Client&gt;&gt;&gt;&gt;();
+Map&lt;Pays,Map&lt;Dep,Map&lt;Ville,List&lt;Client&gt;&gt;&gt;&gt; map = new HashMap&lt;&gt;();
+</code></pre>
+				</section>
+
+				<!--NIO2 -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">NIO2
+					</h2>
+					<small>
+						<ul>
+							<li>Modèle unifié pour tous les systèmes de fichiers</li>
+							<li>Le parcours d'arbres de fichiers (visite)</li>
+							<li>Support des opérations basique sur les fichiers(copier, supprimer, déplacer)</li>
+							<li>Support des liens symboliques</li>
+							<li>Notification de changements sur le Système de fichier</li>
+							<li>SPI pour supporter des nouveaux systèmes de fichiers (ServiceProvider)</li>
+							<li>Travail asynchrone sur des fichiers et sockets</li>
+							<li>...</li>
+						</ul>
+					</small>
+				</section>
+
+				<!-- NIO : nouvelle API -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">NIO2 : La nouvelle API
+					</h2>
+					<div class="align-left">
+					<small>
+						Les principales classes (java.nio.file) :
+						<ul>
+							<li>Path : chemin d'accès vers une ressource</li>
+							<li>Files : classe utilitaire contenant des méthodes (static) d'opérations sur les fichiers et chemins d'accès</li>
+							<li>FileSystem : classe représentant un FS, utilisait pour obtenir les chemins de fichiers</li>
+							<li>FileSystems : classe utilitaire permettant d'obtenir l'accès à un FS</li>
+							<li>FileSystems.getDefault() : obtient un accès à tous les fichiers accessibles par la JVM</li>
+						</ul>
+					</small>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li>Path : n'importe quelle type de ressource (/home/... c:\Users\...)</li>
+							<li>FileStore : class that represents the file storing mechanism that is manipulated by the different methods of the API (a partition of a hard drive, an external device plugged in via USB, etc.).</li>
+						</ul>
+					</aside>
+				</section>
+
+				<!-- NIO2: Files -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">NIO2 : Files
+					</h2>
+						<ul>
+							<li>Read/Write, Copy & Delete</li>
+							<li>Create Files, Directories & Links</li>
+							<li>Use of system "temp" directory</li>
+							<li>Attributes - Modified/Owner/Permissions/Size</li>
+							<li>Déterminer le type de contenu</li>
+							<li>Déterminer le type de fichier (isExecutable, isSymLink</li>
+							<li>...</li>
+						</ul>
+				</section>
+
+				<!-- Exemple parcours de fichiers -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">NIO2 : Parcours de fichiers
+					</h2>
+
+					<pre><code class="java">
+Path p1 = Paths.get("/tmp/foo");
+Path p2 = Paths.get(URI.create("file:///Users/joe/FileTest.java"));
+Path p3 = Paths.get(System.getProperty("user.home"),"logs", "foo.log");
+Path p4 = Paths.get("/home/joe/foo");
+Path p5 = ("c:\\data\\test.dta");
+Path p6 = Paths.get("Test.java").toAbsolutePath();
+
+Path fileName = listing.geFileName();
+Path parent = p2.getParent();
+Path root = p2.getRoot();
+Path subRep = p2.subPath(0,2);
+
+File file = aPathPath.toFile(); // ‘legacy’ java.io.File
+
+					</code></pre>
+				</section>
+
+				<!-- NIO2: Files -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">NIO2 : Liens symboliques
+					</h2>
+						<pre><code class="java">
+// Path and Files are “link aware”
+Path newLink = Paths.get(...);
+Path existingFile = Paths.get(...);
+try {
+	Files.createLink(newLink, existingFile);
+} catch (IOException x) {
+	System.err.println(x);
+} catch (UnsupportedOperationException x) {
+	//Some file systems or some configurations
+	//may not support links
+	System.err.println(x);
+}
+						</code></pre>
+</section>
+
+				<!-- NIO2: Walktree -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">NIO2 : Walktree
+					</h2>
+					interface FileVisitor
+					<pre><code class="java">
+preVisitDirectory(T dir, BasicFileAttributes attrs);
+visitFile(T dir, BasicFileAttributes attrs);
+visitFileFailed(T dir, IOException exc);
+postVisitDirectory(T dir, IOException exc);
+					</code></pre>
+
+						<pre><code class="java">
+public static class PrintFiles extends SimpleFileVisitor<Path> {
+  @Override
+  public FileVisitResult visitFile(Path file, BasicFileAttributes attr) {
+		if (attr.attr.isRegularFile()) {
+		  System.out.format("Regular file: %s ", file);
+		} else if {
+		  System.out.format("Not a regular file: %s ", file);
+		}
+		return CONTINUE;
+  }
+}
+						</code></pre>
+				</section>
+
+				<!-- Fork Join Framework -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Fork Join Framework
+					</h2>
+
+					<pre><code class="java">
+if (my portion of the work is small enough){
+	do the work directly
+}else{
+	split my work into two pieces
+	invoke the two pieces
+}
+					</code></pre>
+					<aside class="notes">
+										<small>Avant, block finaly (fermer les ressources même en cas d'exceptions) </small>
+					</aside>
+				</section>
+
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Fork Join Framework - Pool
+					</h2>
+ForkJoinPool - Service for running ForkJoinTasks
+<pre><code class="java">
+aFjp.execute(aTask); // async
+aFjp.invoke(aTask); // wait
+aFjp.submit(aTask); // async + future
+ForkJoinPool(); // default to platform
+ForkJoinPool(int n); // # concurrent threads
+ForJoinPool(n,aThreadFactory,exHandler,FIFOtasks); // Create your
+// own thread handler, exception handler, and boolean
+// on task ordering (default LIFO)
+</code></pre>
+				</section>
+
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Fork Join Framework - Tasks
+					</h2>
+ForkJoinTask - The abstract base class for:
+<ul>
+<li>RecursiveAction
+	<ul>
+		<li>A recursive resultless task</li>
+		<li>Implements compute() abstract method</li>
+	</ul>
+</li>
+<li> RecursiveTask - Similar to RecursiveAction but returns a result</li>
+</ul>
+<pre><code class="java">
+ForkJoinPool p = new ForkJoinPool();
+MyTask mt = new MyTask(n); // implements compute
+p.submit(mt);
+while (!mt.isDone()) {/*THUMPER!*/ }
+System.out.println(mt.get());
+</code></pre>
+				</section>
+
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">Fork Join Framework - Compute()
+					</h2>
+<ul>
+<li>RecursiveAction - ex. increment an entire array</li>
+<pre><code class="java">
+protected void compute(int lo, int hi) {
+    if (hi - lo < THRESHOLD) {
+      for (int i = lo; i < hi; ++i) array[i]++;
+    } else {
+      int mid = (lo + hi) >>> 1;
+      invokeAll(new IncrementTask(array, lo, mid),
+      new IncrementTask(array, mid, hi));
+    }
+}
+</code></pre>
+<li>RecursiveTask - ex. Fibonacci numbers</li>
+<pre><code class="java">
+protected Integer compute(int n) {
+ if (n <= 1) { return n; }
+ Fibonacci f1 = new Fibonacci(n - 1);
+ Fibonacci f2 = new Fibonacci(n - 2);
+ f1.fork(); f2.fork();
+ return f2.join() + f1.join();
+}
+</code></pre>
+</ul>
+				</section>
+
+				<!-- InvokeDynamic -->
+				<section>
+					<h2><img src="./img/logo.png"
+								style="border: 0.0px; background: transparent; box-shadow: none;">InvokeDynamic
+					</h2>
+					<img src="./img/java7_invokedynamic.png"/>
+					<aside class="notes">
+						<ul>
+							<li>plus de 240 langages tournent sur la JVM</li>
+							<li>beaucoup de ces langages sont dynamiquement typés or le bytecode JVM est statiquement typé</li>
+							<li>language statiquement typé : int x = ... int y = ...  x + y est traduit en iadd</li>
+							<li>language dynamique : x = ... y = ... x + y est toi iadd, ladd, fadd, dadd, etc.</li>
+						</ul>
+						<small>
+							The Java SE 7 platform enables non-Java languages to exploit the infrastructure and potential performance optimizations of the JVM.
+							<br/>
+							The key mechanism is the invokedynamic instruction, which simplifies the implementation of compilers and runtime systems for dynamically typed languages on the JVM.
+						</small>
+					</aside>
+				</section>
+
+			</section>
+
+			<!-- ### Perspectives ### -->
+			<section>
+
+				<section>
+					<h1>Perspectives</h1>
+					<img src="./img/futur_tunel.jpg"/>
+					<!-- <img src="./img/yoda.png"/> -->
+				</section>
+
+				<section>
+					<h2>Evolution des technologies et systèmes d'informations</h2>
+					<img src="./img/perspectives-si.jpg">
+				</section>
+
+				<section>
+					<h2>Le monde change...</h2>
+
+						<span class="fragment" style="text-align:left">Les systèmes d'informations se transmutent vers le web...</span>
+						<br>
+							<span class="fragment" style="text-align:center">(WOA, HATEOAS, REST, SAS,  ...)<br></span>
+						<span class="fragment" style="text-align:'left'">Le premier moyen de consultation d'internet sera bientôt le <strong>smartphone</strong><br></span>
+							<span class="fragment" style="text-align:center">(ResponsiveDesign, Mobile First, ...)</span>
+						<br>
+						<span class="fragment" style="text-align:left">Cette présentation n'est pas un PowertPoint.. c'est une <strong>page web</strong></span>
+						<br>
+						<span class="fragment" style="text-align:center">(Inovation, Nouveaux usages, UX, ...)<br></span>
+						<br>
+						<span class="fragment" style="text-align:left">On construit le futur avec des technologies anciennes devenues matures ?</span> 
+						<aside class="notes">
+							 HATEOS = Hypermedia As The Engine Of Application State<br>
+Spring est entrain d'ajouter un support HATEOAS pour des webservices REST hyper-text driven
+						</aside>
+				</section>
+
+				<section>
+					<h2>...il pose de nouvelles problématiques...</h2>
+					<ul>
+						<li>L'utilisateur devient expert</li>
+						<li>L'information est distribuée</li>
+						<li>La quantité de données augmente</li>
+						<li>...</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>L'adoption des technologies ? (langages)</h2>
+					<img src="./img/radar-languages.png"/>
+					<aside class="notes">
+						ThoughtWorks => Technology Radar (Octobre 2012)
+					</aside>
+				</section>
+
+				<section>
+					<h2>L'adoption des technologies ?(plateformes)</h2>
+					<img src="./img/radar-plateformes.png"/>
+
+					<aside class="notes">
+						<a href="http://www.neotechnology.com/customers" target="_blank"/>Neo4j customers</a>
+						<br>
+						Mozilla, Cisco, Accenture, viadeo
+					</aside>
+				</section>
+
+				<section>
+					<h2>...les tendances actuelles</h2>
+					<ul>
+						<li>Mobile : Modification des stratégies et des produits</li>
+						<li>Décisionnel : BigData != Big Budgets => utilisation de technologie open source et d'infrastructues cloud</li>
+						<li>Simplification des architectures : Tous le monde le souhaite, mais plus facile à dire qu'à faire</li>
+						<li>Persistence : NoSQL</li>
+					</ul>
+
+					<aside class="notes">
+						Décisionnel : Machine learning, semantic analysis, text mining, etc.. techniques sont applicable sur des technologies type NoSQL, MapReduce frameworks, et clusters.. combinés à un usage massif des différents capteurs (mobile, réseaux sociaux, etc.)
+						<br>ça marche plutôt pas mal.
+					</aside>
+				</section>
+
+
+				<section>
+					<h2>Perspectives : Java</h2>
+					<img src="./img/java_matrix.png">
+				</section>
+
+				<section>
+					<h2>Java 8</h2>
+					<ul>
+						<li><strike>Jigsaw</strike></li>
+						<li><strong>Lambda</strong></li>
+						<li>JavaFX 3</li>
+						<li>Complete Oracle JVM</li>
+						<li>Convergence</li>
+						<li>Javascript Interop</li>
+						<li>...</li>
+					</ul>
+					<br/>
+					Pour plus d'informations :
+					<br/><a href="http://openjdk.java.net/projects/jdk8/milestones#Feature_Complete"><img src="./img/openjdk.png"/></a>
+
+					<aside class="notes">
+						JavaFX plateforme de création d'applications RIA sur desktop et navigateur 2 parties (JavaFX Script, JavaFX Mobile)
+					</aside>
+				</section>
+
+				<section>
+					<h2>Java / Scala</h2>
+<pre class="fragment"><code class="java">
+// Java 1.8
+List&lt;Students&gt; stds = Arrays.asList(s1, s2, sn);
+double highestScore = stds.filter(Student s -> s.getCountry() == FR)
+	.map(Student s -> s.getScore())!
+	.max();
+</code></pre>
+
+<pre class="fragment"><code class="scala">
+//Scala
+val students = List(s1, s2, sn)
+val highestScore = students.filter(s:Student => s.country == FR)
+	.map(s:Student => s.score)
+	.max
+</code></pre>
+				</section>
+
+				<section>
+					<h2>Java 9 et au delà..</h2>
+					<small>
+						<ul>
+							<li>Interopérabilité
+							<ul>
+								<li>JVM Multi-langages</li>
+								<li>Améliorer l'intégration Java/code natif</li>
+							</ul>
+							</li>
+							<li>Cloud
+							<ul>
+								<li>Gestion des ressources</li>
+								<li>Multi-tenancy support?</li>
+							</ul>
+							</li>
+							<li>Facilité d'utilisation
+							<ul>
+								<li>Self-tuning JVM</li>
+								<li>Amélioration du langage</li>
+							</ul>
+							</li>
+							<li>Optimisations avancées
+							<ul>
+								<li>Sytème de type unifié</li>
+								<li>Optimisation des structures de données</li>
+							</ul>
+							</li>
+							<li>"Works Everywhere and with Everything"
+							<ul>
+								<li>Réduire pour être embarqué massivement dans les serveurs</li>
+								<li>Supporter des modèles de calcul hétérogènes</li>
+							</ul>
+							</li>
+						</ul>
+					</small>
+				</section>
+
+				<!-- Jigsaw -->
+				<!-- <section>
+					<h2><strike>Java 8</strike> : Jigsaw</h2>
+					<ul>
+						<li>Java Modules (JSR 227)</li>
+						<li>OSGI</li>
+						<li>Super Package (JSR 294)</li>
+						<li>Jigsaw</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2><strike>Java 8</strike> : Jigsaw</h2>
+					<ul>
+						<li>Buts :
+						<ul>
+							<li>système simple de module </li>
+							<li>Utilisable par tous les développeurs Java</li>
+							<li>Suffisament puissant pour modularisé le JDK lui même (pour adresser des devices plus petits)</li>
+							<li>Améliorer les performances (download, démarrage)</li>
+						</ul>
+						</li>
+						<li>Conséquences
+						<ul>
+							<li>La fin du classpath</li>
+							<li>la fin de rt.jar</li>
+						</ul>
+						</li>
+					</ul>
+					<br/>
+					<blockquote cite>
+					Modularity = Grouping + Dependence + Versioning + Encapsulation + Optional modules + Modules aliases
+					</blockquote>
+				</section>
+				<section>
+					<h2><strike>Java 8</strike> : Jigsaw</h2>
+					<ul>
+						<li>Buts :
+						<ul>
+							<li>système simple de module </li>
+							<li>Utilisable par tous les développeurs Java</li>
+							<li>Suffisament puissant pour modularisé le JDK lui même (pour adresser des devices plus petits)</li>
+							<li>Améliorer les performances (download, démarrage)</li>
+						</ul>
+						</li>
+						<li>Conséquences
+						<ul>
+							<li>La fin du classpath</li>
+							<li>la fin de rt.jar</li>
+						</ul>
+						</li>
+					</ul>
+					<br/>
+					<blockquote cite>
+					Modularity = Grouping + Dependence + Versioning + Encapsulation + Optional modules + Modules aliases
+					</blockquote>
+				</section> -->
+
+				<!-- Lambda -->
+				<section>
+					<h2><strike>Java 8</strike> : Lambda</h2>
+					slides complémentaires (s'il reste du temps)
+				</section>
+
+				<section>
+					<h2>Java 8 : Lambda</h2>
+					Le fonctionnel, concept nouveau en java ?
+
+<pre class="fragment"><code class="java">
+jdbcTemplate.queryForObject("select * from student where id = ?",
+  new Object[]{1212l},
+  new RowMapper() {
+   public Object mapRow(ResultSet rs, int rowNum) throws SQLException {
+     return new Student(rs.getString("name"), rs.getInt("age"));
+   }
+});
+</code></pre>
+
+<pre class="fragment"><code class="java">
+File[] photoFiles = new File("/pics").listFiles(new FilenameFilter() {
+	public boolean accept(File file, String fileName) {
+		return fileName.endsWith(".jpg");
+	}
+});
+</code></pre>
+				</section>
+
+				<section>
+				<h2>Java Lambda : ça ressemble à quoi ?</h2>
+<pre class="fragment"><code class="java">
+// pre Java 1.8
+new File(“/").listFiles(new FileFilter() {
+	public boolean accept(File f) {
+		return f.isDirectory();
+	}
+});
+</code></pre>
+
+<pre class="fragment"><code class="java">
+// Java 1.8
+new File(“/").listFiles((File f) -> f.isDirectory());
+</code></pre>
+
+			<aside class="notes">
+			Lambda Expressions can be used for
+			‘functional interfaces’ (e.g. FileFilter)
+			that have a single method
+			(e.g. boolean accept(File f)).
+			</aside>
+
+				</section>
+
+				<section>
+					<h2>Java / Scala</h2>
+<pre class="fragment"><code class="java">
+// Java 1.8
+List&lt;Students&gt; stds = Arrays.asList(s1, s2, sn);
+double highestScore = stds.filter(Student s -> s.getCountry() == FR)
+	.map(Student s -> s.getScore())!
+	.max();
+</code></pre>
+
+<pre class="fragment"><code class="scala">
+//Scala
+val students = List(s1, s2, sn)
+val highestScore = students.filter(s:Student => s.country == FR)
+	.map(s:Student => s.score)
+	.max
+</code></pre>
+				</section>
+
+			</section>
+
+			<!-- #### Conclusion ### -->
+			<section>
+			<h2>Conclusion</h2>
+			Aspirine ou café ?<br>
+			<img src="./img/aspirine.jpg">
+			<img src="./img/cafe.jpg">
+			Communauté, Perennité, Innovation, Pragmatisme
+			<aside class="notes">
+				<ul>
+					<li>Java est un langage ouvert avec un ecosystème riche</li>
+					<li>La machine virtuelle java est un environnement stable et pérein</li>
+					<li>La communauté assure la survi du langage et au delà celle de la plateforme en innovant constamment</li>
+				</ul>
+			</aside>
+			</section>
+
+			<!--  ########### Divers ################ -->
+<!--
+			<section>
+				<h2>Nommage des versions</h2>
+				<small>
+					Limited Update releases will be numbered in multiples of 20.
+					We intend for Critical Patch Updates to continue to use odd numbers. The numbers will be calculated by adding multiples of five to the prior Limited Update and when needed adding one to keep the resulting number odd.<br>
+					This is best illustrated with an example:
+					<ul>
+						<li>The next Limited Update for JDK 7 will be numbered 7u40, and the next 3 CPUs after that will be numbered 7u45, 7u51, and 7u55.</li>
+						<li>The next release will be a Limited Update 7u60, followed by CPUs 7u65, 7u71, and 7u75.This numbering scheme will leave several numbers between releases which will allow us to insert releases – for example security alerts or support releases, should that become necessary - without having to renumber later releases.</li>
+					</ul>
+				</small>
+			</section>
+-->
+				<section>
+					<h2>Sources et articles connexes</h2>
+					<small>
+						<ul>
+							<li>http://www.oracle.com</li>
+							<li>http://www.infoq.com</li>
+							<li>@delabassee - Devoxx France 2012</li>
+							<li>Urs Peter - nl.Jug Oct 2012</li>
+							<li>Joshua Bloch - Devoxx</li>
+							<li>Rémi Forax - invokedynamic</li>
+							<li>Steven G. Harris - Devoxx</li>
+							<li>@gtardif - Devoxx France 2012</li>
+							<li>Klaus Kreft & Angelika Langer - Lambdas in Java 8</li>
+							<li>ThoughtWorks - Technology radar Oct. 2012</li>
+							<li>... and more...</li>
+						</ul>
+					</small>
+				</section>
+
+			</section>
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls : true,
+			progress : true,
+			history : true,
+			center : true,
+
+			theme : Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition : Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+			// Optional libraries used to extend on reveal.js
+			dependencies : [ {
+				src : 'lib/js/classList.js',
+				condition : function() {
+					return !document.body.classList;
+				}
+			}, {
+				src : 'plugin/markdown/showdown.js',
+				condition : function() {
+					return !!document.querySelector('[data-markdown]');
+				}
+			}, {
+				src : 'plugin/markdown/markdown.js',
+				condition : function() {
+					return !!document.querySelector('[data-markdown]');
+				}
+			}, {
+				src : 'plugin/highlight/highlight.js',
+				async : true,
+				callback : function() {
+					hljs.initHighlightingOnLoad();
+				}
+			}, {
+				src : 'plugin/zoom-js/zoom.js',
+				async : true,
+				condition : function() {
+					return !!document.body.classList;
+				}
+			}, {
+				src : 'plugin/notes/notes.js',
+				async : true,
+				condition : function() {
+					return !!document.body.classList;
+				}
+			}
+			// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
+		});
+	</script>
+</body>
+</html>
